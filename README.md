@@ -7,7 +7,7 @@
 ```bash
 git clone https://github.com/moesnow/http-server.git
 cd http-server
-gcc main.c -o http-server
+make
 ```
 
 ## 用法
