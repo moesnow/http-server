@@ -1,5 +1,15 @@
-http-server : main.c
-	gcc main.c -o http-server
+CC = gcc
+CFLAGS = -Wall -Werror
+TARGET = http-server
+SOURCE = main.c
 
-clean :
-	rm http-server
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(SOURCE)
+	$(CC) $(CFLAGS) -o $@ $<
+
+clean:
+	rm -f $(TARGET)
+
